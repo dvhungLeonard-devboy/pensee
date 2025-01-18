@@ -46,6 +46,7 @@ return new class extends Migration
             $table->string('name', 255); // VARCHAR(255), variant name
             $table->string('sku', 255); // VARCHAR(255), SKU code
             $table->decimal('price', 10, 2); // DECIMAL(10,2), variant price
+            $table->integer('stock_quantity'); // INT, stock quantity
             $table->timestamps(); // created_at and updated_at columns
 
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
@@ -65,9 +66,8 @@ return new class extends Migration
             $table->id(); // BIGINT, primary key, auto-increment
             $table->unsignedBigInteger('group_id'); // BIGINT, foreign key from product_groups
             $table->unsignedBigInteger('product_id'); // BIGINT, foreign key from products
-            $table->integer('stock_quantity'); // INT, stock quantity
             $table->timestamps(); // created_at and updated_at columns
-
+            
             $table->foreign('group_id')->references('id')->on('product_groups')->onDelete('cascade');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
