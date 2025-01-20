@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ProductDatabaseSeeder extends Seeder
+class DatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,6 +20,11 @@ class ProductDatabaseSeeder extends Seeder
             ProductGroupMappingsTableSeeder::class,
             ProductCategoriesTableSeeder::class,
             ProductDiscountsTableSeeder::class,
+            UserSeeder::class,
+            CustomerSeeder::class,
+            OrderSeeder::class,
+            OrderItemSeeder::class,
+            PaymentSeeder::class,
         ]);
     }
 }

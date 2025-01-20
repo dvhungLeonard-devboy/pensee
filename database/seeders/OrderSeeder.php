@@ -6,29 +6,25 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class ProductGroupMappingsTableSeeder extends Seeder
+class OrderSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('product_group_mappings')->insert([
+        DB::table('orders')->insert([
             [
-                'group_id' => 1,
-                'product_id' => 1,
+                'customer_id' => 1, 
+                'total_price' => 100.00,
+                'status' => 'completed',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'group_id' => 1,
-                'product_id' => 2,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'group_id' => 2,
-                'product_id' => 1,
+                'customer_id' => 2,
+                'total_price' => 50.00,
+                'status' => 'pending',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

@@ -39,6 +39,30 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'Thuốc giảm đau',
+                'slug' => Str::slug('thuoc-giam-dau'),
+                'description' => 'Các loại thuốc giảm đau',
+                'parent_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Thuốc ho',
+                'slug' => Str::slug('thuoc-ho'),
+                'description' => 'Các loại thuốc trị ho',
+                'parent_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Kem dưỡng da',
+                'slug' => Str::slug('kem-duong-da'),
+                'description' => 'Sản phẩm dưỡng ẩm và chăm sóc da',
+                'parent_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

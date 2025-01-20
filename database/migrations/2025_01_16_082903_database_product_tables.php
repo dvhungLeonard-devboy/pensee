@@ -86,7 +86,7 @@ return new class extends Migration
         Schema::create('product_discounts', function (Blueprint $table) {
             $table->id(); // BIGINT, primary key, auto-increment
             $table->unsignedBigInteger('product_id'); // BIGINT, foreign key from products
-            $table->enum('discount_type', ['percentage', 'fixed']); // ENUM, discount type
+            $table->enum('discount_type', ['percentage', 'fixed_amount']); // ENUM, discount type
             $table->decimal('discount_value', 10, 2); // DECIMAL(10,2), discount value
             $table->timestamp('start_date'); // TIMESTAMP, start date
             $table->timestamp('end_date')->nullable(); // TIMESTAMP, end date
